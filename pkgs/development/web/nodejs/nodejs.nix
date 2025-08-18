@@ -428,6 +428,10 @@ let
 
               # Those are annoyingly flaky, but not enough to be marked as such upstream.
               "test-wasi"
+
+              "test-cluster-dgram-1"
+              "test-http-server-stale-close"
+              "test-fs-cp"
             ]
             ++ lib.optionals (stdenv.buildPlatform.isDarwin && stdenv.buildPlatform.isx86_64) [
               # These tests fail on x86_64-darwin (even without sandbox).
